@@ -23,7 +23,7 @@ under the License.
   <includeCSS>com_zimbra_om.css</includeCSS>
   <handlerObject>com_zimbra_om_handlerObject</handlerObject>
 
-  <zimletPanelItem label="${msg.openmeetings_label}" icon="om-panelIcon">
+  <zimletPanelItem label="Openmeetings" icon="om-panelIcon">
     <toolTipText>OM meetings and events</toolTipText>
       <contextMenu>
           <menuItem label = "Zimlet Preferences" id= "om_preferences"/>
