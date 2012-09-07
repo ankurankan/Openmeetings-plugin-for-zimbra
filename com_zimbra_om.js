@@ -100,135 +100,7 @@ com_zimbra_om_handlerObject.prototype.menuItemSelected = function(){
         j +=65;
 
     }
- /**
-    this.server2 = new DwtText({parent:this.pView, name:"server2",id:"server2"});
-    this.server2.setText(("server2"));
-    this.server2.setPosition(DwtControl.ABSOLUTE_STYLE);
-    this.server2.setLocation(20,100);
-
-    this.server2_baseurl_text = new DwtText({parent:this.pView, name:"server2_baseurl_text",id:"server2_baseurl_text"});
-    this.server2_baseurl_text.setText("URL");
-    this.server2_baseurl_text.setPosition(DwtControl.ABSOLUTE_STYLE);
-    this.server2_baseurl_text.setLocation(20,120);
-    this.server2_baseurl = new DwtInputField ({parent:this.pView, name: "server2_baseurl", id: "server2_baseurl"});
-    this.server2_baseurl.setValue(this.getUserProperty("server2_baseurl"));
-    this.server2_baseurl.setPosition(DwtControl.ABSOLUTE_STYLE);
-    this.server2_baseurl.setLocation(20,135);
-
-    this.server2_username_text = new DwtText({parent:this.pView, name:"server2_username_text", id:"server2_username_text"});
-    this.server2_username_text.setText("username");
-    this.server2_username_text.setPosition(DwtControl.ABSOLUTE_STYLE);
-    this.server2_username_text.setLocation(200,120);
-    this.server2_username = new DwtInputField ({parent:this.pView, name: "server2_username", id: "server2_username"});
-    this.server2_username.setValue(this.getUserProperty("server2_username"));
-    this.server2_username.setPosition(DwtControl.ABSOLUTE_STYLE);
-    this.server2_username.setLocation(200,135);
-    
-    this.server2_password_text = new DwtText({parent:this.pView, name:"server2_password_text", id:"server2_password_text"});
-    this.server2_password_text.setText("password");
-    this.server2_password_text.setPosition(DwtControl.ABSOLUTE_STYLE);
-    this.server2_password_text.setLocation(380,120);
-    this.server2_password = new DwtInputField ({parent:this.pView, name: "server2_password" ,id: "server2_password"});
-    this.server2_password.setValue(this.getUserProperty("server2_password"));
-    this.server2_password.setPosition(DwtControl.ABSOLUTE_STYLE);
-    this.server2_password.setLocation(380,135);
-    
-    this.server3 = new DwtText ({parent:this.pView, name:"server3", id:"server3"});
-    this.server3.setText (("server3"));
-    this.server3.setPosition(DwtControl.ABSOLUTE_STYLE);
-    this.server3.setLocation(20,165);
-
-    this.server3_baseurl_text = new DwtText ({parent:this.pView, name: "server3_baseurl_text", id:"server3_baseurl_text"});
-    this.server3_baseurl_text.setText("URL");
-    this.server3_baseurl_text.setPosition(DwtControl.ABSOLUTE_STYLE);
-    this.server3_baseurl_text.setLocation(20,185);
-    this.server3_baseurl  = new DwtInputField ({parent:this.pView, name:  "server3_baseurl" , id: "server3_baseurl"});
-    this.server3_baseurl.setValue(this.getUserProperty("server3_baseurl"));
-    this.server3_baseurl.setPosition(DwtControl.ABSOLUTE_STYLE);
-    this.server3_baseurl.setLocation(20,200);
-
-    this.server3_username_text = new DwtText ({parent:this.pView, name:"server3_username_text", id:"server3_username_text"});
-    this.server3_username_text.setText("username");
-    this.server3_username_text.setPosition(DwtControl.ABSOLUTE_STYLE);
-    this.server3_username_text.setLocation(200,185)
-    this.server3_username = new DwtInputField({parent:this.pView, name:"server3_username", id:"server_username"});
-    this.server3_username.setValue(this.getUserProperty("server3_username"));
-    this.server3_username.setPosition(DwtControl.ABSOLUTE_STYLE);
-    this.server3_username.setLocation(200,200);
-
-    this.server3_password_text = new DwtText ({parent:this.pView, name:"server3_password_text", id:"server3_password_text"});
-    this.server3_password_text.setText("password");
-    this.server3_password_text.setPosition(DwtControl.ABSOLUTE_STYLE);
-    this.server3_password_text.setLocation(380,185);
-    this.server3_password = new DwtInputField ({parent:this.pView, name: "server3_password", id:"server3_password"});
-    this.server3_password.setValue(this.getUserProperty("server3_password"));
-    this.server3_password.setPosition(DwtControl.ABSOLUTE_STYLE);
-    this.server3_password.setLocation(380,200);
-
-    this.server4 = new DwtText({parent:this.pView, name:"server4", id:"server4"});
-    this.server4.setText(("server4"));
-    this.server4.setPosition(DwtControl.ABSOLUTE_STYLE);
-    this.server4.setLocation(20,230);
-
-    this.server4_baseurl_text = new DwtText ({parent:this.pView, name:"server4_baseurl_text", id :"server4_baseurl_text"});
-    this.server4_baseurl_text.setText("URL");
-    this.server4_baseurl_text.setPosition(DwtControl.ABSOLUTE_STYLE);
-    this.server4_baseurl_text.setLocation(20,250);
-    this.server4_baseurl = new DwtInputField ({parent:this.pView, name:"server4_baseurl", id:"server4_baseurl"});
-    this.server4_baseurl.setValue(this.getUserProperty("server4_baseurl"));
-    this.server4_baseurl.setPosition(DwtControl.ABSOLUTE_STYLE);
-    this.server4_baseurl.setLocation(20,265);
-
-    this.server4_username_text = new DwtText({parent:this.pView, name:"server4_username_text", id:"server4_username_text"});
-    this.server4_username_text.setText("username");
-    this.server4_username_text.setPosition(DwtControl.ABSOLUTE_STYLE);
-    this.server4_username_text.setLocation(200,250);
-    this.server4_username = new DwtInputField ({parent:this.pView, name: "server4_username", id: "server4_username"});
-    this.server4_username.setValue(this.getUserProperty("server4_username"));
-    this.server4_username.setPosition(DwtControl.ABSOLUTE_STYLE);
-    this.server4_username.setLocation(200,265);
-
-    this.server4_password_text = new DwtText({parent:this.pView, name:"server4_password_text", id:"server4_password_text"});
-    this.server4_password_text.setText("password");
-    this.server4_password_text.setPosition(DwtControl.ABSOLUTE_STYLE);
-    this.server4_password_text.setLocation(380,250);
-    this.server4_password = new DwtInputField ({parent:this.pView, name:"server4_password", id: "server4_password"});
-    this.server4_password.setValue(this.getUserProperty("server4_password"));
-    this.server4_password.setPosition(DwtControl.ABSOLUTE_STYLE);
-    this.server4_password.setLocation(380,265);
-    
-    this.server5 = new DwtText ({parent:this.pView, name:"server5", id:"server5"});
-    this.server5.setText (("server5"));
-    this.server5.setPosition(DwtControl.ABSOLUTE_STYLE);
-    this.server5.setLocation(20,295);
-
-    this.server5_baseurl_text =  new DwtText ({parent:this.pView, name:"server5_baseurl_text", id:"server5_baseurl_text"});
-    this.server5_baseurl_text.setText("URL");
-    this.server5_baseurl_text.setPosition(DwtControl.ABSOLUTE_STYLE);
-    this.server5_baseurl_text.setLocation(20,315);
-    this.server5_baseurl = new DwtInputField ({parent:this.pView , name:"server5_baseurl" ,id:"server5_baseurl"});
-    this.server5_baseurl.setValue(this.getUserProperty("server5_baseurl"));
-    this.server5_baseurl.setPosition(DwtControl.ABSOLUTE_STYLE);
-    this.server5_baseurl.setLocation(20,330);
-    
-    this.server5_username_text = new DwtText ({parent:this.pView, name:"server5_username_text",id:"server5_username_text"});
-    this.server5_username_text.setText("username");
-    this.server5_username_text.setPosition(DwtControl.ABSOLUTE_STYLE);
-    this.server5_username_text.setLocation(200,315);
-    this.server5_username = new DwtInputField ({parent:this.pView , name: "server5_username", id:"server5_username"});
-    this.server5_username.setValue(this.getUserProperty("server5_username"));
-    this.server5_username.setPosition(DwtControl.ABSOLUTE_STYLE);
-    this.server5_username.setLocation(200,330);
-
-    this.server5_password_text = new DwtText ({parent:this.pView, name:"server5_password_text", id:"server5_password_text"});
-    this.server5_password_text.setText("password");
-    this.server5_password_text.setPosition(DwtControl.ABSOLUTE_STYLE);
-    this.server5_password_text.setLocation(380,315);
-    this.server5_password = new DwtInputField ({parent:this.pView, name :"server5_password", id:"server5_password"});
-    this.server5_password.setValue(this.getUserProperty("server5_password"));
-    this.server5_password.setPosition(DwtControl.ABSOLUTE_STYLE);
-    this.server5_password.setLocation(380,330);
-**/
+ 
     this.pbDialog = this._createDialog({title:("pref"), view:this.pView, standardButtons: [DwtDialog.OK_BUTTON,DwtDialog.CANCEL_BUTTON]});
     this.pbDialog.setButtonListener(DwtDialog.OK_BUTTON, new AjxListener(this,this._okBtnListenerpref));
     this.pbDialog.popup();
@@ -245,22 +117,6 @@ com_zimbra_om_handlerObject.prototype._okBtnListenerpref =
             this.setUserProperty(server_text[i]+"_username",server_username[i].getValue(),1);
             this.setUserProperty(server_text[i]+"_password",server_password[i].getValue(),1);
         }
-/**		this.setUserProperty("server1_baseurl", this.server1_baseurl.getValue(),1);
-        this.setUserProperty("server1_username", this.server1_username.getValue(),1);
-        this.setUserProperty("server1_password", this.server1_password.getValue(),1);
-        this.setUserProperty("server2_baseurl",  this.server2_baseurl.getValue(),1);
-        this.setUserProperty("server2_username", this.server2_username.getValue(),1);
-        this.setUserProperty("server2_password", this.server2_password.getValue(),1);
-        this.setUserProperty("server3_baseurl", this.server3_baseurl.getValue(),1);
-        this.getUserProperty("server3_username", this.server3_username.getValue(),1);
-        this.getUserProperty("server3_password", this.server3_password.getValue(),1);
-        this.setUserProperty("server4_baseurl",  this.server4_baseurl.getValue(),1);
-        this.setUserProperty("server4_username", this.server4_username.getValue(),1);
-        this.setUserProperty("server4_password", this.server4_password.getValue(),1);
-        this.setUserProperty("server5_baseurl", this.server5_baseurl.getValue(),1);
-        this.setUserProperty("server5_username", this.server5_username.getValue(),1);
-        this.setUserProperty("server5_password", this.server5_password.getValue(),1);
- **/
         this.pbDialog.popdown();
     };
 
@@ -472,21 +328,42 @@ com_zimbra_om_handlerObject.prototype._selectserverdisplay =
             this._profile_parentView = new DwtComposite ({parent:this.getShell()});
             this._profile_parentView.getHtmlElement().style.overflow = "auto";
             this._profile_parentView.setPosition(DwtControl.RELATIVE_STYLE);
-
+            com_zimbra_om_handlerObject.prototype.getHTML =
+                function(){
+                        strn = "";
+                        for (var i=0;i<5;i++){
+                            strn+= "<div><a href='#' id="+ "'link"+ (i+1) + "'"+">" + this.getUserProperty(server_text[i]+"_baseurl")+"</a></div>";
+                        }
+                    return(strn);
+                }
     //        this._profile_parentView.getHtmlElement().innerHTML = "<div><select id = 'selected_server'><option value = 'server1'>"+ server1_baseurl + "</option>" + "<option value = 'server2'>" + server2_baseurl + "</option>" + "<option value = 'server3'>" + server3_baseurl + "</option>" + "<option value = 'server4'>" + server4_baseurl + "<option value = 'server5'>" + server5_baseurl + "</option>" + "</select></div>";
-            this._profile_parentView.getHtmlElement().innerHTML = "<div><a href='#' id= 'link1'>"+ this.getUserProperty("server1_baseurl") +"</a></div>" +
+            this._profile_parentView.getHtmlElement().innerHTML = this.getHTML();
+
+
+                
+
+/**                                                                  "<div><a href='#' id= 'link1'>"+ this.getUserProperty("server1_baseurl") +"</a></div>" +
                                                                   "<div><a href='#' id= 'link2'>"+ this.getUserProperty("server2_baseurl") +"</a></div>" +
                                                                   "<div><a href='#' id= 'link3'>"+ this.getUserProperty("server3_baseurl") +"</a></div>" +
                                                                   "<div><a href='#' id= 'link4'>"+ this.getUserProperty("server4_baseurl") +"</a></div>" +
                                                                   "<div><a href='#' id= 'link5'>"+ this.getUserProperty("server5_baseurl") +"</a></div>";
 
-            var link_server1 = document.getElementById('link1');
+**/
+            var link_server1,link_server2,link_server3,link_server4,link_server5,link_server1_arg,link_server2_arg,link_server3_arg,link_server4_arg,link_server5_arg;
+            link_server = [link_server1,link_server2,link_server3,link_server4,link_server5];
+            link_server_arg = [link_server1_arg,link_server2_arg,link_server3_arg,link_server4_arg,link_server5_arg];
+            for (var j =0; j<5; j++){
+                link_server[j] = document.getElementById('link'+(j+1));
+                link_server_arg[j] = this.getUserProperty(server_text[j]+"_baseurl");
+                link_server[j].onclick = AjxCallback.simpleClosure(this.get_session,this,this.getUserProperty(server_text[j]+ "_baseurl"));
+            }
+          /**  var link_server1 = document.getElementById('link1');
             var link_server2 = document.getElementById('link2');
             var link_server3 = document.getElementById('link3');
             var link_server4 = document.getElementById('link4');
-            var link_server5 = document.getElementById('link5');
+            var link_server5 = document.getElementById('link5');**/
        
-            
+          /**
             link_server1_arg = this.getUserProperty("server1_baseurl");
             link_server1.onclick = AjxCallback.simpleClosure(this.get_session,this,this.getUserProperty("server1_baseurl"));
 
@@ -501,7 +378,7 @@ com_zimbra_om_handlerObject.prototype._selectserverdisplay =
 
             link_server5_arg = this.getUserProperty("server5_baseurl");
             link_server5.onclick = AjxCallback.simpleClosure(this.get_session,this,this.getUserProperty("server5_baseurl"));
-
+**/
 
 
             this.profile_select_Dlg = this._createDialog({title:("Select Profile"), view:this._profile_parentView, standardButtons : [DwtDialog.OK_BUTTON]});
@@ -732,6 +609,45 @@ com_zimbra_om_handlerObject.prototype.generateHash_responseHandler =
 //getSession Request
 com_zimbra_om_handlerObject.prototype.get_session=
 			function(str){
+       /**             var a = 2;
+                    var b =3;
+                    var c =4;
+                    var d =5;
+
+                dic = {a:'a', b: 'b',c:'c',d:'d'};
+                temp1 = dic[a];
+                temp2 = dic[b];
+                temp3 = dic[c];
+                temp4 = dic [d];
+                    server1_baseurl_dict = this.getUserProperty("server1_baseurl");
+                    server2_baseurl_dict = this.getUserProperty("server2_baseurl");
+                    server3_baseurl_dict = this.getUserProperty("server3_baseurl");
+                    server4_baseurl_dict = this.getUserProperty("server4_baseurl");
+                    server5_baseurl_dict = this.getUserProperty("server5_baseurl");
+                    var server_serlect_dict = {server1_baseurl_dict:server_text[0],server2_baseurl_dict:server_text[1],server3_baseurl_dict:server_text[2],server4_baseurl_dict:server_text[3],server5_baseurl_dict:server_text[4]};
+                    var selected_server_array = server_serlect_dict[str];
+                   // var temp = selected_server_array+"_baseurl";
+                  //  var temp1 = selected_server_array + "_username";
+                   // var temp2 = selected_server_array + "_password";
+                this._parentView = new DwtListView({parent:this.getShell(), noMaximize:false});
+                this._parentView.setSize("500","400");
+                this._parentView.getHtmlElement().style.overflow = "auto";
+                this._parentView.setPosition(DwtControl.RELATIVE_STYLE);
+                this.meeting_start_date_time = new DwtText ({parent:this._parentView});
+                this.meeting_start_date_time.setText(temp1);
+                this.meeting_start_date_time = new DwtText ({parent:this._parentView});
+                this.meeting_start_date_time.setText(temp2);
+                this.meeting_start_date_time = new DwtText ({parent:this._parentView});
+                this.meeting_start_date_time.setText(temp3);
+                this.mainDlg = this._createDialog({title:("Openmeetings"), view:this._parentView, standardButtons : [DwtDialog.OK_BUTTON]});
+                this.mainDlg.setButtonListener(DwtDialog.OK_BUTTON, new AjxListener(this, this.generateHash));
+                this.mainDlg.popup();
+
+
+                    selected_server = this.getUserProperty(temp);
+                    selected_username = this.getUserProperty(temp1);
+                    selected_password = this.getUserProperty(temp2);
+**/
                     if (str == this.getUserProperty("server1_baseurl")){
                         selected_server = this.getUserProperty("server1_baseurl");
                         selected_username = this.getUserProperty("server1_username");
@@ -763,7 +679,7 @@ com_zimbra_om_handlerObject.prototype.get_session=
                   //  get_session_url = str + 'services/UserService/getSession';
 
 					var url = ZmZimletBase.PROXY + AjxStringUtil.urlComponentEncode(get_session_url);
-                AjxRpc.invoke(null, url, null , new AjxCallback(this, this._responseHandler) , true);
+                    AjxRpc.invoke(null, url, null , new AjxCallback(this, this._responseHandler) , true);
 				};
 
 				
