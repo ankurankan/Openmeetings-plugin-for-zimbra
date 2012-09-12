@@ -46,13 +46,13 @@ var server_password = [this.server1_password,this.server2_password,this.server3_
 com_zimbra_om_handlerObject.prototype.doubleClicked=
 	function(){
 		this.singleClicked();
-		};
+		}
 
 		
 com_zimbra_om_handlerObject.prototype.singleClicked = 
 		function(){
 				this._selectserverdisplay();
-			};
+			}
 
 
 
@@ -105,7 +105,7 @@ com_zimbra_om_handlerObject.prototype.menuItemSelected = function(){
     this.pbDialog.setButtonListener(DwtDialog.OK_BUTTON, new AjxListener(this,this._okBtnListenerpref));
     this.pbDialog.popup();
 
-};
+}
 
 
 
@@ -118,7 +118,7 @@ com_zimbra_om_handlerObject.prototype._okBtnListenerpref =
             this.setUserProperty(server_text[i]+"_password",server_password[i].getValue(),1);
         }
         this.pbDialog.popdown();
-    };
+    }
 
 
 
@@ -134,7 +134,7 @@ com_zimbra_om_handlerObject.prototype.calendar_popup_startdate = function(){
  			this.omDlg = this._createDialog({title:("start_date_selector"), view:this._parentView, standardButtons : [DwtDialog.OK_BUTTON,DwtDialog.CANCEL_BUTTON]});
             this.omDlg.setButtonListener(DwtDialog.OK_BUTTON, new AjxListener(this, this.startdate_calendar_okbtnlistener));
 			this.omDlg.popup();
-};
+}
 
 //Calendar start date dialog OK Button Listener
 com_zimbra_om_handlerObject.prototype.startdate_calendar_okbtnlistener = function(){
@@ -145,7 +145,7 @@ com_zimbra_om_handlerObject.prototype.startdate_calendar_okbtnlistener = functio
             this.meeting_start_date_box.setValue(start_date_final,true);
             this.omDlg.popdown();
 
-};
+}
 
 
 
@@ -163,7 +163,7 @@ com_zimbra_om_handlerObject.prototype.calendar_popup_enddate = function(){
             this.omDlg.setButtonListener(DwtDialog.OK_BUTTON, new AjxListener(this, this.enddate_calendar_okbtnlistener));
 			this.omDlg.popup();
 
-};
+}
 
 
 //Calendar end date selector OK Button Listener
@@ -175,7 +175,7 @@ com_zimbra_om_handlerObject.prototype.enddate_calendar_okbtnlistener = function(
             var end_date_final = end_date_string_array [0] + " " + end_date_string_array [1] + " " + end_date_string_array[2] + " " + end_date_string_array[3];
             this.meeting_end_date_box.setValue(end_date_final,true);
             this.omDlg.popdown();
-};
+}
 
 
 //Add room dialog box
@@ -253,7 +253,7 @@ com_zimbra_om_handlerObject.prototype.add_room_button_listener = function(){
     this.add_room_dialog = this._createDialog({title:("add_room"), view:this.add_room_parentView, standartButtons:[DwtDialog.OK_BUTTON]});
     this.add_room_dialog.setButtonListener(DwtDialog.OK_BUTTON, new AjxListener(this, this._add_room_okButtonListener));
     this.add_room_dialog.popup();
-};
+}
 
 
 //Add room dialog box OK Button Listener
@@ -296,7 +296,7 @@ com_zimbra_om_handlerObject.prototype._add_room_okButtonListener = function(){
     var url = ZmZimletBase.PROXY + AjxStringUtil.urlComponentEncode(request_url);
     AjxRpc.invoke(null, url, null , new AjxCallback(this, this.add_room_responseHandler), true);
 
-};
+}
 
 
 
@@ -336,19 +336,7 @@ com_zimbra_om_handlerObject.prototype._selectserverdisplay =
                         }
                     return(strn);
                 }
-    //        this._profile_parentView.getHtmlElement().innerHTML = "<div><select id = 'selected_server'><option value = 'server1'>"+ server1_baseurl + "</option>" + "<option value = 'server2'>" + server2_baseurl + "</option>" + "<option value = 'server3'>" + server3_baseurl + "</option>" + "<option value = 'server4'>" + server4_baseurl + "<option value = 'server5'>" + server5_baseurl + "</option>" + "</select></div>";
             this._profile_parentView.getHtmlElement().innerHTML = this.getHTML();
-
-
-                
-
-/**                                                                  "<div><a href='#' id= 'link1'>"+ this.getUserProperty("server1_baseurl") +"</a></div>" +
-                                                                  "<div><a href='#' id= 'link2'>"+ this.getUserProperty("server2_baseurl") +"</a></div>" +
-                                                                  "<div><a href='#' id= 'link3'>"+ this.getUserProperty("server3_baseurl") +"</a></div>" +
-                                                                  "<div><a href='#' id= 'link4'>"+ this.getUserProperty("server4_baseurl") +"</a></div>" +
-                                                                  "<div><a href='#' id= 'link5'>"+ this.getUserProperty("server5_baseurl") +"</a></div>";
-
-**/
             var link_server1,link_server2,link_server3,link_server4,link_server5,link_server1_arg,link_server2_arg,link_server3_arg,link_server4_arg,link_server5_arg;
             link_server = [link_server1,link_server2,link_server3,link_server4,link_server5];
             link_server_arg = [link_server1_arg,link_server2_arg,link_server3_arg,link_server4_arg,link_server5_arg];
@@ -357,30 +345,6 @@ com_zimbra_om_handlerObject.prototype._selectserverdisplay =
                 link_server_arg[j] = this.getUserProperty(server_text[j]+"_baseurl");
                 link_server[j].onclick = AjxCallback.simpleClosure(this.get_session,this,this.getUserProperty(server_text[j]+ "_baseurl"));
             }
-          /**  var link_server1 = document.getElementById('link1');
-            var link_server2 = document.getElementById('link2');
-            var link_server3 = document.getElementById('link3');
-            var link_server4 = document.getElementById('link4');
-            var link_server5 = document.getElementById('link5');**/
-       
-          /**
-            link_server1_arg = this.getUserProperty("server1_baseurl");
-            link_server1.onclick = AjxCallback.simpleClosure(this.get_session,this,this.getUserProperty("server1_baseurl"));
-
-            link_server2_arg = this.getUserProperty("server2_baseurl");
-            link_server2.onclick = AjxCallback.simpleClosure(this.get_session,this,this.getUserProperty("server2_baseurl"));
-
-            link_server3_arg = this.getUserProperty("server3_baseurl");
-            link_server3.onclick = AjxCallback.simpleClosure(this.get_session,this,this.getUserProperty("server3_baseurl"));
-
-            link_server4_arg = this.getUserProperty("server4_baseurl");
-            link_server4.onclick = AjxCallback.simpleClosure(this.get_session,this,this.getUserProperty("server4_baseurl"));
-
-            link_server5_arg = this.getUserProperty("server5_baseurl");
-            link_server5.onclick = AjxCallback.simpleClosure(this.get_session,this,this.getUserProperty("server5_baseurl"));
-**/
-
-
             this.profile_select_Dlg = this._createDialog({title:("Select Profile"), view:this._profile_parentView, standardButtons : [DwtDialog.OK_BUTTON]});
             this.profile_select_Dlg.popup();
     }
@@ -516,7 +480,7 @@ com_zimbra_om_handlerObject.prototype._displayDialog =
  			this.mainDlg = this._createDialog({title:("Openmeetings"), view:this._parentView, standardButtons : [DwtDialog.OK_BUTTON]});
 			this.mainDlg.setButtonListener(DwtDialog.OK_BUTTON, new AjxListener(this, this.generateHash));
 			this.mainDlg.popup();
-				};
+				}
 
 
 com_zimbra_om_handlerObject.prototype.getURL =
@@ -529,7 +493,7 @@ com_zimbra_om_handlerObject.prototype.getURL =
             }
         }
         return (result);
-    };
+    }
 
 //get invitation hash request
 com_zimbra_om_handlerObject.prototype.generateHash=
@@ -609,78 +573,20 @@ com_zimbra_om_handlerObject.prototype.generateHash_responseHandler =
 //getSession Request
 com_zimbra_om_handlerObject.prototype.get_session=
 			function(str){
-       /**             var a = 2;
-                    var b =3;
-                    var c =4;
-                    var d =5;
-
-                dic = {a:'a', b: 'b',c:'c',d:'d'};
-                temp1 = dic[a];
-                temp2 = dic[b];
-                temp3 = dic[c];
-                temp4 = dic [d];
-                    server1_baseurl_dict = this.getUserProperty("server1_baseurl");
-                    server2_baseurl_dict = this.getUserProperty("server2_baseurl");
-                    server3_baseurl_dict = this.getUserProperty("server3_baseurl");
-                    server4_baseurl_dict = this.getUserProperty("server4_baseurl");
-                    server5_baseurl_dict = this.getUserProperty("server5_baseurl");
-                    var server_serlect_dict = {server1_baseurl_dict:server_text[0],server2_baseurl_dict:server_text[1],server3_baseurl_dict:server_text[2],server4_baseurl_dict:server_text[3],server5_baseurl_dict:server_text[4]};
-                    var selected_server_array = server_serlect_dict[str];
-                   // var temp = selected_server_array+"_baseurl";
-                  //  var temp1 = selected_server_array + "_username";
-                   // var temp2 = selected_server_array + "_password";
-                this._parentView = new DwtListView({parent:this.getShell(), noMaximize:false});
-                this._parentView.setSize("500","400");
-                this._parentView.getHtmlElement().style.overflow = "auto";
-                this._parentView.setPosition(DwtControl.RELATIVE_STYLE);
-                this.meeting_start_date_time = new DwtText ({parent:this._parentView});
-                this.meeting_start_date_time.setText(temp1);
-                this.meeting_start_date_time = new DwtText ({parent:this._parentView});
-                this.meeting_start_date_time.setText(temp2);
-                this.meeting_start_date_time = new DwtText ({parent:this._parentView});
-                this.meeting_start_date_time.setText(temp3);
-                this.mainDlg = this._createDialog({title:("Openmeetings"), view:this._parentView, standardButtons : [DwtDialog.OK_BUTTON]});
-                this.mainDlg.setButtonListener(DwtDialog.OK_BUTTON, new AjxListener(this, this.generateHash));
-                this.mainDlg.popup();
-
-
-                    selected_server = this.getUserProperty(temp);
-                    selected_username = this.getUserProperty(temp1);
-                    selected_password = this.getUserProperty(temp2);
-**/
-                    if (str == this.getUserProperty("server1_baseurl")){
-                        selected_server = this.getUserProperty("server1_baseurl");
-                        selected_username = this.getUserProperty("server1_username");
-                        selected_password = this.getUserProperty("server1_password");
+                    for (i=0;i<5;i++){
+                        if (str == this.getUserProperty(server_text[i]+"_baseurl")){
+                            selected_server = this.getUserProperty(server_text[i]+"_baseurl");
+                            selected_username = this.getUserProperty(server_text[i]+"_username");
+                            selected_password = this.getUserProperty(server_text[i]+"_password");
+                            break;
+                        }
                     }
-                    else if (str == this.getUserProperty("server2_baseurl")){
-                        selected_server = this.getUserProperty("server2_baseurl");
-                        selected_username = this.getUserProperty("server2_username");
-                        selected_password = this.getUserProperty("server2_password");
-                    }
-                    else if (str == this.getUserProperty("server3_baseurl")){
-                        selected_server = this.getUserProperty("server3_baseurl");
-                        selected_username = this.getUserProperty("server3_username");
-                        selected_password = this.getUserProperty("server3_password");
-                    }
-                    else if (str == this.getUserProperty("server4_baseurl")){
-                        selected_server = this.getUserProperty("server4_baseurl");
-                        selected_username = this.getUserProperty("server4_username");
-                        selected_password = this.getUserProperty("server4_password");
-                    }
-                    else if (str == this.getUserProperty("server5_baseurl")){
-                        selected_server = this.getUserProperty("server5_baseurl");
-                        selected_username = this.getUserProperty("server5_username");
-                        selected_password = this.getUserProperty("server5_password");
-                    }
-
 
                 get_session_url = this.getURL ("UserService", "getSession");
-                  //  get_session_url = str + 'services/UserService/getSession';
 
 					var url = ZmZimletBase.PROXY + AjxStringUtil.urlComponentEncode(get_session_url);
                     AjxRpc.invoke(null, url, null , new AjxCallback(this, this._responseHandler) , true);
-				};
+				}
 
 				
 //getSession request response Handler
@@ -696,7 +602,7 @@ com_zimbra_om_handlerObject.prototype._responseHandler=
 					}catch(e){
 							this._showErrorMsg(e);
 							}
-        };
+        }
 
 
 //loginUser request
@@ -706,7 +612,7 @@ com_zimbra_om_handlerObject.prototype.login_user = function(){
 				
                 AjxRpc.invoke(null, request_url, null , new AjxCallback(this, this._reponseHandler1), true);
                 this._displayDialog();
-        };
+        }
 
 
 //loginUser request response Handler
@@ -722,7 +628,7 @@ com_zimbra_om_handlerObject.prototype._responseHandler1=
 								if (errorid < 0){
 										this._notlogged(errorid);
 									}
-						};
+						}
 						
 
 //getErrorByCode request
@@ -733,7 +639,7 @@ com_zimbra_om_handlerObject.prototype._notlogged = function (errorid){
                 var url = this.getURL ("UserService","getErrorByCode",{SID:new_sid, errorid:errorid,language_id:1});
                 var request_url = ZmZimletBase.PROXY + AjxStringUtil.urlComponentEncode(url);
                 AjxRpc.invoke(null, request_url, null , new AjxCallback(this, this._reponseHandler2), true);
-								};
+								}
 
 
 //getErrorByCode request response Handler							
@@ -746,7 +652,7 @@ com_zimbra_om_handlerObject.prototype._responseHandler2=
 								}catch(e){
 									this._showErrorMsg(e);
 									}
-						};
+						}
 			
 			
 //Response on failure
@@ -765,7 +671,7 @@ com_zimbra_om_handlerObject.prototype._showErrorMsg =
         msgDialog.reset(); // clean up earlier message
         msgDialog.setMessage(msg, DwtMessageDialog.CRITICAL_STYLE); //set new message
         msgDialog.popup();//display the dialog
-    };
+    }
 
 // Open new mail message
 com_zimbra_om_handlerObject.prototype.new_message =
